@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>主页</title>
+  <script src="../static1/static/js/echarts.min.js"></script>
+  <link rel="stylesheet" href="../static1/static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static1/static/css/admin.css">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="../static1/static/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="../static1/static/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../static1/static/js/jquery1.11.1.min.js"></script>
+     <!-- 导入 Axios -->
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- 导入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script src="../static1/main.js"></script>
+</head>
+<body>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar">
+    <ul class="am-list admin-sidebar-list">
+      <li><a href="/index"><span class="am-icon-home"></span> 首页</a></li>
+{#      <li><a href="/uploadpage"><span class="am-icon-sign-out"></span> 数据导入</a></li>#}
+    </ul>
+
+    <div class="am-panel am-panel-default admin-sidebar-panel">
+      <div class="am-panel-bd">
+        <p><span class="am-icon-bookmark"></span> 公告</p>
+        <p>时光静好，与君语；细水流年，与君同。—— Amaze</p>
+      </div>
+    </div>
+
+    <div class="am-panel am-panel-default admin-sidebar-panel">
+      <div class="am-panel-bd">
+        <p><span class="am-icon-tag"></span> wiki</p>
+        <p>Welcome to the Amaze wiki!</p>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">系统图片</strong></div>
+    </div>
+    <style>
+      #main{
+        display: -webkit-flex;
+        display: flex;
+        width: 1259px;
+      }
+      .d1{
+        margin: 5px;
+      }
+      #main2{
+        display: -webkit-flex;
+        display: flex;
+        width: 1259px;
+        height: 450px;
+      }
+      #search{
+        position: relative;
+        left: 70%;
+        top:50%;
+      }
+    </style>
+    <div id="main" style="">
+      <div class="d1"  id="cpuChart" style="width:  622px;height:400px;"></div>
+      <div class="d1"  id="memChart" style="width:  622px;height:400px;"></div>
+    </div>
+    <div id="main2">
+      <div class="d2"  id="netChart" style="width:  622px;height:400px;"></div>
+      <div class="d2"  id="diskIoChart" style="width: 622px;height:400px;"></div>
+    </div>
+    </div>
+
+
+</div>
+<!--[if lt IE 9]>
+<script src="../static1/static/js/jquery1.11.1.min.js"></script>
+
+<script src="../static1/static/js/modernizr.js"></script>
+<script src="../static1/static/js/polyfill/rem.min.js"></script>
+<script src="../static1/static/js/polyfill/respond.min.js"></script>
+<script src="../static1/static/js/amazeui.legacy.js"></script>
+
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static1/static/js/jquery.min.js"></script>
+<script src="../static1/static/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="../static1/static/js/app.js"></script>
+
+</body>
+</html>

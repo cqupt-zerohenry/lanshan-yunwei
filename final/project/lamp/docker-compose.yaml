@@ -1,0 +1,21 @@
+version: '3'
+services:
+  # MySQL
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    ports:
+      - "3309:3306"
+
+  # PHP and Apache
+  php:
+    image: php:apache
+    volumes:
+      - ./html:/var/www/html
+    ports:
+    - "8888:80" 
+    depends_on:
+      - db
+

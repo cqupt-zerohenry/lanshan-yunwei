@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    volumes:
+      - ./sql/mydb.sql:/docker-entrypoint-initdb.d/mydb.sql  
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "5000:5000"
+    depends_on:
+    - db
+  ##管理数据库
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin:latest
+     container_name: phpmyadmin
+     restart: always
+     ports:
+       - 5700:80
+     environment:
+        PMA_ARBITRARY: 1
+        PMA_PORTS: 3306
