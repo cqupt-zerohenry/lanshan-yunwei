@@ -86,6 +86,7 @@ def register():
         import pymysql
 
         # 连接数据库
+        # Don't use hard code password
         db = pymysql.connect(host="db", port=3306, user="root", password="root", db="mydb",
                              charset="utf8mb4",
                              cursorclass=pymysql.cursors.DictCursor)
@@ -94,6 +95,7 @@ def register():
         # 进行查询命令
         select_sql = """select * from users where user=%s and pwd=%s"""
 
+        # Don't store plaintext password
         username=request.form["userName"]
         password=request.form["password"]
         captcha = request.form.get('captcha').lower()
